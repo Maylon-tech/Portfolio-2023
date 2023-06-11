@@ -85,19 +85,18 @@ section {
 .sec3 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: purple;
+ 
 }
 
 .sec4 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: blue;
+    
 }
 
 .sec5 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: burlywood;
 }
 
 .active {
@@ -365,6 +364,27 @@ section {
         }
     }
 
+    .stat-title {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 3.5rem 0; 
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 60%;
+            height: 1px;
+            background-color: var(--gray5);
+            transform: translateX(-50%);
+        }
+    }
+
+
+
+
     /*  Time Line  */
     .timeline {
         display: grid;
@@ -426,6 +446,7 @@ section {
 .port-text {
     padding: 2rem 0;
     text-align: center;
+    font-size: 2rem;
 }
 
 .portfolios {
@@ -447,24 +468,24 @@ section {
             }
         }
         .hover-items {
-         width: 100%;
-         height: 100%;
-         background-color: var(--color-secondary);
-         position: absolute;
-         left: 0;
-         top: 0;
-         border-radius: 15px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: column;
-         opacity: 0;
-         transform: scale(0);
-         transition: all .5s ease-in-out;
-         h3 {
-            font-size: 1.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transform: scale(0);
+            transition: all .5s ease-in-out;
+            h3 {
+                font-size: 1.5rem;
+                color: var(--white);
+                margin-bottom: 1.5rem;
          }
          .icons {
             display: flex;
@@ -502,6 +523,105 @@ section {
 .portfolio-item:hover .hover-items {
     opacity: 1;
     transform: scale(1);
+}
+
+
+/* Blogs Section   */
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+
+    .blog {
+        position: relative;
+        background-color: var(--gray5);
+        border-radius: 5px;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, .2);
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            box-shadow: 1px 1px 20px rgba(0, 0, 0, .5);
+            transform: translateY(-5px);
+            img {
+                filter: grayscale(0);
+                transform: scale(1.1);
+                box-shadow: 1px 1px 20px rgba(0, 0, 0, .8);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .blog-text {
+            margin-top: -7px;
+            padding: 1.1rem;
+            border-top: 8px solid var(--color-secondary);
+
+            h4 {
+                font-size: 1.5rem;
+                margin-bottom: .7rem;
+                transition: all .4s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    color: var(--color-secondary);
+                }
+            }
+            p {
+                color: var(--gray2);
+                line-height: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+/* Contact Section   */
+
+.contact-content {
+    display: flex;
+    padding: 3.5rem;
+
+    .left-contact {
+        flex: 2;
+    }
+    .right-contact {
+        flex: 3;
+        margin-left: 3rem;
+
+        .input-control {
+            margin: 1.5rem 0;
+
+            input, textarea {
+                border-radius: 30px;
+                font-weight: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                padding: .8rem 1.1rem;
+                outline: none;
+                border: none;
+                background-color: var(--gray5);
+                width: 100%;
+                color: var(--white);
+                resize: none;
+            }
+        }
+        .i-c-2 {
+            display: flex;
+            :last-child {
+                margin-left: 1.5rem;
+            }
+        }
+        .submit-btn {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
 }
 
 
