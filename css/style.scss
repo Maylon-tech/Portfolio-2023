@@ -12,6 +12,7 @@
     --black: #111;
     --gray0: #f8f8f8;
     --gray1: #dbe1e8;
+
     --gray2: #b2becd;
     --gray3: #6c7983;
     --gray4: #454e56;
@@ -26,6 +27,22 @@
     --color-ts: rgb(114, 168, 212);
     --color-react: rgb(48, 111, 163);
     --color-next: lightgray;
+}
+
+
+.light-mode {
+    --color-primary: #191d2b;
+    --color-secondary: #27AE60;
+    --white: #eee;
+    --black: #111;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
 }
 
 
@@ -130,8 +147,8 @@ section {
         padding: 1rem;
         cursor: pointer;
         background-color: var(--gray4);
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -155,6 +172,31 @@ section {
         }
     }
 }
+
+
+.theme-btn {
+    z-index: 10;
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--gray4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+    transition: all .3s ease-in-out;
+    &:active {
+        transform: translateY(-8px);
+    }
+}
+
+
+
+
 
 // Header - Content
 
@@ -589,7 +631,60 @@ section {
 
     .left-contact {
         flex: 2;
+
+        h4 {
+            margin-top: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 1rem 0;
+            line-height: 2rem;
+        }
+        .contact-info {
+            .contact-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    margin: .3rem 0 !important;
+                    padding: 0 !important;
+                }
+            }
+        }
+        .contact-icon{
+            display: flex;
+            margin-top: 2rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                color: var(--white);
+                background-color: var(--gray5);
+                cursor: pointer;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 .4rem;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                    i {
+                        color: var(--color-primary);
+                    }
+                }
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.3rem;
+                }
+            }
+        }
     }
+
     .right-contact {
         flex: 3;
         margin-left: 3rem;
