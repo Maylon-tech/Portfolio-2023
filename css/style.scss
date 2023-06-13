@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -31,10 +33,10 @@
 
 
 .light-mode {
-    --color-primary: #191d2b;
-    --color-secondary: #27AE60;
-    --white: #eee;
-    --black: #111;
+    --color-primary: #ffffff;
+    --color-secondary: purple;
+    --white: #454e56;
+    --black: #fff;
     --gray0: #f8f8f8;
     --gray1: #dbe1e8;
 
@@ -68,7 +70,7 @@ a {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     color: var(white);
     overflow: hidden;
 }
@@ -797,3 +799,7 @@ section {
         }
     }
 }
+
+
+
+@import 'media';
